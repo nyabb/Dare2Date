@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.han.nl/schemas/types" targetNamespace="http://www.han.nl/schemas/types" elementFormDefault="qualified">
+    <complexType name="PlayListRequest">
+        <all>
+            <element name="userId" type="int" minOccurs="1" maxOccurs="1"/>
+        </all>
+    </complexType>
+    <complexType name="PlayListResult">
+        <all>
+            <element name="succes" type="boolean" minOccurs="1" maxOccurs="1"/>
+        </all>
+    </complexType>
+
+    <complexType name="FindMatchesRequest">
+        <all>
+            <element name="userId" type="int" minOccurs="1" maxOccurs="1"/>
+        </all>
+    </complexType>
+    <complexType name="FindMatchesResult">
+        <all>
+            <element name="users" type="tns:User" minOccurs="1"/>
+        </all>
+    </complexType>
+    <simpleType name="User">
+        <restriction base="NCName">
+            <enumeration value="name"/>
+            <enumeration value="age"/>
+            <enumeration value="gender"/>
+        </restriction>
+    </simpleType>
+
+    <complexType name="MatchRequest">
+        <all>
+            <element name="userId" type="int" minOccurs="1" maxOccurs="1"/>
+        </all>
+    </complexType>
+    <complexType name="MatchResult">
+        <all>
+            <element name="succes" type="boolean" minOccurs="1" maxOccurs="1"/>
+        </all>
+    </complexType>
+</schema>

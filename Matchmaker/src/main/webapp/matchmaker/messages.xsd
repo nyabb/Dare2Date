@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.han.nl/schemas/messages" xmlns:types="http://www.han.nl/schemas/types" targetNamespace="http://www.han.nl/schemas/messages" elementFormDefault="qualified">
+    <import namespace="http://www.han.nl/schemas/types" schemaLocation="types.xsd"/>
+    <element name="GetPlayListRequest">
+        <complexType>
+            <sequence>
+                <element name="input" type="types:PlayListRequest" minOccurs="1" maxOccurs="1"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="GetPlayListResponse">
+        <complexType>
+            <sequence>
+                <element name="result" type="types:PlayListResult" minOccurs="1" maxOccurs="1"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="GetFindMatchesRequest">
+        <complexType>
+            <sequence>
+                <element name="input" type="types:FindMatchesRequest" minOccurs="1" maxOccurs="1"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="GetFindMatchesResponse">
+        <complexType>
+            <sequence>
+                <element name="result" type="types:FindMatchesResult" minOccurs="1" maxOccurs="1"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="GetMatchRequest">
+        <complexType>
+            <sequence>
+                <element name="input" type="types:MatchRequest" minOccurs="1" maxOccurs="1"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="GetMatchResponse">
+        <complexType>
+            <sequence>
+                <element name="result" type="types:MatchResult" minOccurs="1" maxOccurs="1"/>
+            </sequence>
+        </complexType>
+    </element>
+</schema>
