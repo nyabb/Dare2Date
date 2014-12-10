@@ -1,13 +1,9 @@
 package nl.ead.webservice.services;
 
 import nl.ead.webservice.*;
-import com.wrapper.spotify.Api;
-import com.wrapper.spotify.methods.*;
-import com.wrapper.spotify.models.*;
-
 import nl.ead.webservices.models.User;
-
 import nl.ead.webservices.models.UserStorage;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ws.server.endpoint.annotation.Endpoint;
 import org.springframework.ws.server.endpoint.annotation.PayloadRoot;
@@ -32,8 +28,6 @@ public class CalculatorEndpoint {
         SpotifyService spotifyService = new SpotifyService();
         spotifyService.getPlaylist(user);
 
-        usersStorage.getUser(userId);
-
         PlayListResult result = new PlayListResult();
         result.setSucces(true);
 
@@ -42,8 +36,6 @@ public class CalculatorEndpoint {
 
         return response;
     }
-
-
 
     @PayloadRoot(localPart = "GetFindMatchesRequest", namespace = "http://www.han.nl/schemas/messages")
     @ResponsePayload

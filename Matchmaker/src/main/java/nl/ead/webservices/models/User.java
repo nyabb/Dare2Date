@@ -19,11 +19,18 @@ public class User {
         return this.spotifyUserId;
     }
 
-    public String getSpotifyUserPlaylist() {
+    public String getSpotifyUserPlaylistId() {
         return this.playlistId;
     }
 
     public void setUserPlayList(List<PlaylistTrack> userPlayList) {
         this.userPlayList = userPlayList;
     }
+
+
+    public List<PlaylistTrack> getUserPlayList() {
+        return this.userPlayList;
+        }
+
+
 }

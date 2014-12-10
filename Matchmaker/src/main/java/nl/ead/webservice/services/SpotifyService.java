@@ -1,15 +1,11 @@
 package nl.ead.webservice.services;
 
-import com.google.common.util.concurrent.FutureCallback;
-import com.google.common.util.concurrent.Futures;
-import com.google.common.util.concurrent.SettableFuture;
 import com.wrapper.spotify.Api;
-import com.wrapper.spotify.methods.authentication.ClientCredentialsGrantRequest;
-import com.wrapper.spotify.models.ClientCredentials;
-import com.wrapper.spotify.models.Page;
-import com.wrapper.spotify.models.PlaylistTrack;
-import com.wrapper.spotify.methods.PlaylistTracksRequest;
+import com.wrapper.spotify.models.*;
 import nl.ead.webservices.models.User;
+import com.google.common.util.concurrent.*;
+import com.wrapper.spotify.methods.PlaylistTracksRequest;
+import com.wrapper.spotify.methods.authentication.ClientCredentialsGrantRequest;
 
 public class SpotifyService {
     public String CLIENT_ID = "bb4f1b58db464014984939d9e9142438";
@@ -23,15 +19,14 @@ public class SpotifyService {
     public void getPlaylist(User user) {
         Api api = this.getApi();
         setAccessToken(api);
-        PlaylistTracksRequest request = api.getPlaylistTracks(user.getSpotifyUserId(), user.getSpotifyUserPlaylist()).build();
+        PlaylistTracksRequest request = api.getPlaylistTracks(user.getSpotifyUserId(), user.getSpotifyUserPlaylistId()).build();
 
         try {
             final Page<PlaylistTrack> page = request.get();
 
             user.setUserPlayList(page.getItems());
-
         } catch (Exception e) {
-            System.out.println("Something went wrong!" + e.getMessage());
+            System.out.println("Something went wrong: " + e.getMessage());
         }
     }
 

@@ -9,6 +9,7 @@ nl/ead/webservice/PlayListRequest.class
 nl/ead/webservice/MatchRequest.class
 nl/ead/webservice/services/SpotifyService.class
 nl/ead/webservice/services/CalculatorEndpoint.class
+nl/ead/webservice/services/MatchingService.class
 nl/ead/webservice/User.class
 nl/ead/webservice/GetFindMatchesResponse.class
 nl/ead/webservice/package-info.class

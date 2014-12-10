@@ -14,4 +14,6 @@ public class UserStorage {
     public User getUser(int userId) {
         return this.users[userId];
     }
+
+    public User[] getUsers() {return this.users;}
 }

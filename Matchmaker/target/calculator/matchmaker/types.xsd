@@ -18,16 +18,17 @@
     </complexType>
     <complexType name="FindMatchesResult">
         <all>
-            <element name="users" type="tns:User" minOccurs="1"/>
+            <element name="user" type="tns:User" minOccurs="1" />
         </all>
     </complexType>
-    <simpleType name="User">
-        <restriction base="NCName">
-            <enumeration value="name"/>
-            <enumeration value="age"/>
-            <enumeration value="gender"/>
-        </restriction>
-    </simpleType>
+
+    <complexType name="User">
+        <sequence>
+            <element name="name" type="string"/>
+            <element name="gender" type="string"/>
+            <element name="userId" type="int"/>
+        </sequence>
+    </complexType>
 
     <complexType name="MatchRequest">
         <all>
