@@ -18,8 +18,14 @@
     </complexType>
     <complexType name="FindMatchesResult">
         <all>
-            <element name="user" type="tns:User" minOccurs="1" />
+            <element name="user" type="tns:UserList" minOccurs="1" />
         </all>
+    </complexType>
+
+    <complexType name="UserList">
+        <sequence>
+            <element name="user" type="tns:User" minOccurs="0" maxOccurs="unbounded"/>
+        </sequence>
     </complexType>
 
     <complexType name="User">
@@ -33,6 +39,7 @@
     <complexType name="MatchRequest">
         <all>
             <element name="userId" type="int" minOccurs="1" maxOccurs="1"/>
+            <element name="matchId" type="int" minOccurs="1" maxOccurs="1"/>
         </all>
     </complexType>
     <complexType name="MatchResult">

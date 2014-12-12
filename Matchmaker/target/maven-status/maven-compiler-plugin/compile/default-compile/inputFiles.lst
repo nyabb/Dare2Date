@@ -7,6 +7,7 @@
 /Users/natnaelyntn/Dropbox/AP/SAD-NATWIL/ASSIGNMENT 2/spring-ws-nati/Matchmaker/target/generated-sources/xjc/nl/ead/webservice/GetPlayListRequest.java
 /Users/natnaelyntn/Dropbox/AP/SAD-NATWIL/ASSIGNMENT 2/spring-ws-nati/Matchmaker/target/generated-sources/xjc/nl/ead/webservice/FindMatchesRequest.java
 /Users/natnaelyntn/Dropbox/AP/SAD-NATWIL/ASSIGNMENT 2/spring-ws-nati/Matchmaker/target/generated-sources/xjc/nl/ead/webservice/PlayListResult.java
+/Users/natnaelyntn/Dropbox/AP/SAD-NATWIL/ASSIGNMENT 2/spring-ws-nati/Matchmaker/src/main/java/nl/ead/webservice/services/FacebookService.java
 /Users/natnaelyntn/Dropbox/AP/SAD-NATWIL/ASSIGNMENT 2/spring-ws-nati/Matchmaker/target/generated-sources/xjc/nl/ead/webservice/FindMatchesResult.java
 /Users/natnaelyntn/Dropbox/AP/SAD-NATWIL/ASSIGNMENT 2/spring-ws-nati/Matchmaker/target/generated-sources/xjc/nl/ead/webservice/GetFindMatchesResponse.java
 /Users/natnaelyntn/Dropbox/AP/SAD-NATWIL/ASSIGNMENT 2/spring-ws-nati/Matchmaker/src/main/java/nl/ead/webservices/models/User.java
@@ -18,3 +19,4 @@
 /Users/natnaelyntn/Dropbox/AP/SAD-NATWIL/ASSIGNMENT 2/spring-ws-nati/Matchmaker/target/generated-sources/xjc/nl/ead/webservice/GetFindMatchesRequest.java
 /Users/natnaelyntn/Dropbox/AP/SAD-NATWIL/ASSIGNMENT 2/spring-ws-nati/Matchmaker/src/main/java/nl/ead/webservices/models/UserStorage.java
 /Users/natnaelyntn/Dropbox/AP/SAD-NATWIL/ASSIGNMENT 2/spring-ws-nati/Matchmaker/target/generated-sources/xjc/nl/ead/webservice/MatchRequest.java
+/Users/natnaelyntn/Dropbox/AP/SAD-NATWIL/ASSIGNMENT 2/spring-ws-nati/Matchmaker/target/generated-sources/xjc/nl/ead/webservice/UserList.java

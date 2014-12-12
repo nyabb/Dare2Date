@@ -16,7 +16,7 @@ public class SpotifyService {
         return Api.builder().clientId(CLIENT_ID).clientSecret(CLIENT_SECRET).redirectURI(REDIRECT_URI).build();
     }
 
-    public void getPlaylist(User user) {
+    public boolean getPlaylist(User user) {
         Api api = this.getApi();
         setAccessToken(api);
         PlaylistTracksRequest request = api.getPlaylistTracks(user.getSpotifyUserId(), user.getSpotifyUserPlaylistId()).build();
@@ -24,10 +24,12 @@ public class SpotifyService {
         try {
             final Page<PlaylistTrack> page = request.get();
 
-            user.setUserPlayList(page.getItems());
+            return user.setUserPlayList(page.getItems());
         } catch (Exception e) {
             System.out.println("Something went wrong: " + e.getMessage());
         }
+
+        return false;
     }
 
     private void setAccessToken(final Api api) {
